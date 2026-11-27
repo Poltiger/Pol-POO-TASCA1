@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="ca">
-<head>
-    <meta charset="utf-8">
-    <title>Biblioteca digital</title>
-</head>
-<body>
-    <h1>Biblioteca digital</h1>
-</body>
-</html>
+<h1><?= escapar($biblioteca->getNom()) ?></h1>
+<ul class="list-group">
+    <li class="list-item">Materials: <?= count($biblioteca->getMaterials()) ?></li>
+    <li class="list-item">Usuaris: <?= count($biblioteca->getUsuaris()) ?></li>
+    <li class="list-item">Préstecs actius: <?= count($biblioteca->llistarPrestecsActius()) ?></li>
+    <li class="list-item">Reserves: <?= count($biblioteca->llistarReserves()) ?></li>
+</ul>
